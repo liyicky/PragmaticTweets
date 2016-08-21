@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I finished the Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-Dg-pw7">
+                                <rect key="frame" x="204" y="20" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-kX-QZK">
+                                <rect key="frame" x="236" y="49" width="128" height="30"/>
+                                <state key="normal" title="Send a Tweet"/>
+                                <connections>
+                                    <action selector="handleSendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKE-Jx-sjY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh Baka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejR-cq-EMA">
+                                <rect key="frame" x="264" y="289" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jason Baka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgO-HO-a00">
+                                <rect key="frame" x="252" y="260" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KVS-Dg-pw7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="76C-7L-cpa"/>
+                            <constraint firstItem="KVS-Dg-pw7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Kk-hl-jq6"/>
+                            <constraint firstItem="ejR-cq-EMA" firstAttribute="top" secondItem="ZgO-HO-a00" secondAttribute="bottom" constant="8" id="IOi-Q1-cVC"/>
+                            <constraint firstItem="6cC-kX-QZK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDh-qq-xbX"/>
+                            <constraint firstItem="ejR-cq-EMA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="frz-wd-8x1"/>
+                            <constraint firstItem="6cC-kX-QZK" firstAttribute="top" secondItem="KVS-Dg-pw7" secondAttribute="bottom" constant="8" id="naM-DJ-Bi7"/>
+                            <constraint firstItem="ejR-cq-EMA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qnl-OF-tPo"/>
+                            <constraint firstItem="ZgO-HO-a00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uU4-Mg-IN1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="243" y="339"/>
         </scene>
     </scenes>
 </document>

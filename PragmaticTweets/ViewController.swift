@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ViewController: UIViewController {
 
@@ -21,5 +22,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func handleSendButtonTapped(sender: UIButton) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetVC.setInitialText("アンバカ #pragio9")
+            self.presentViewController(tweetVC, animated: true, completion: nil)
+        } else {
+            NSLog("Can't Send Tweet")
+        }
+    }
 }
 
