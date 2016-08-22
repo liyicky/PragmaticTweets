@@ -17,48 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I finished the Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-Dg-pw7">
-                                <rect key="frame" x="204" y="20" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyS-Em-YpP">
+                                <rect key="frame" x="231" y="20" width="139" height="30"/>
+                                <state key="normal" title="Show my Tweets"/>
+                                <connections>
+                                    <action selector="handleShowButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PKd-FA-Pnd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cC-kX-QZK">
-                                <rect key="frame" x="236" y="49" width="128" height="30"/>
+                                <rect key="frame" x="236" y="58" width="128" height="30"/>
                                 <state key="normal" title="Send a Tweet"/>
                                 <connections>
                                     <action selector="handleSendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKE-Jx-sjY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anh Baka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejR-cq-EMA">
-                                <rect key="frame" x="264" y="289" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jason Baka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgO-HO-a00">
-                                <rect key="frame" x="252" y="260" width="97" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-6I-EGr">
+                                <rect key="frame" x="0.0" y="96" width="600" height="504"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KVS-Dg-pw7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="76C-7L-cpa"/>
-                            <constraint firstItem="KVS-Dg-pw7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Kk-hl-jq6"/>
-                            <constraint firstItem="ejR-cq-EMA" firstAttribute="top" secondItem="ZgO-HO-a00" secondAttribute="bottom" constant="8" id="IOi-Q1-cVC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B2F-6I-EGr" secondAttribute="bottom" id="6xH-kI-Pvg"/>
+                            <constraint firstAttribute="trailing" secondItem="B2F-6I-EGr" secondAttribute="trailing" id="Cxv-FU-8n1"/>
+                            <constraint firstItem="6cC-kX-QZK" firstAttribute="top" secondItem="RyS-Em-YpP" secondAttribute="bottom" constant="8" id="Kx4-gv-fOr"/>
                             <constraint firstItem="6cC-kX-QZK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MDh-qq-xbX"/>
-                            <constraint firstItem="ejR-cq-EMA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="frz-wd-8x1"/>
-                            <constraint firstItem="6cC-kX-QZK" firstAttribute="top" secondItem="KVS-Dg-pw7" secondAttribute="bottom" constant="8" id="naM-DJ-Bi7"/>
-                            <constraint firstItem="ejR-cq-EMA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qnl-OF-tPo"/>
-                            <constraint firstItem="ZgO-HO-a00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uU4-Mg-IN1"/>
+                            <constraint firstItem="RyS-Em-YpP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="klC-nJ-o4h"/>
+                            <constraint firstItem="B2F-6I-EGr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mQl-uv-aap"/>
+                            <constraint firstItem="B2F-6I-EGr" firstAttribute="top" secondItem="6cC-kX-QZK" secondAttribute="bottom" constant="8" id="oJn-uF-qFt"/>
+                            <constraint firstItem="RyS-Em-YpP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rEm-LS-fUf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="twitterWebView" destination="B2F-6I-EGr" id="6K2-h4-2hW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="339"/>
+            <point key="canvasLocation" x="44" y="63"/>
         </scene>
     </scenes>
 </document>

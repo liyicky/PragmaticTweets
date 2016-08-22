@@ -10,6 +10,8 @@ import UIKit
 import Social
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var twitterWebView: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +23,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func handleShowButtonTapped(sender: UIButton) {
+        if let url = NSURL (string: "https://twitter.com/liyicky") {
+            twitterWebView.loadRequest(NSURLRequest(URL: url))
+        }
+        
+    }
 
     @IBAction func handleSendButtonTapped(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetVC.setInitialText("アンバカ #pragio9")
+            tweetVC.setInitialText("アンバカ #pragios9")
             self.presentViewController(tweetVC, animated: true, completion: nil)
         } else {
             NSLog("Can't Send Tweet")
         }
     }
+    
+    
+    
 }
 
