@@ -14,6 +14,7 @@
 		5CF8C92D1D69581E00593E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */; };
 		5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */; };
 		5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */; };
+		5CF8C9451D6E937300593E07 /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsTests.swift; sourceTree = "<group>"; };
 		5CF8C93C1D6A99BD00593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
+		5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */,
+				5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */,
 				5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */,
 				5CF8C93C1D6A99BD00593E07 /* Info.plist */,
 			);
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */,
+				5CF8C9451D6E937300593E07 /* PragmaticTweetsUITests.swift in Sources */,
 				5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
