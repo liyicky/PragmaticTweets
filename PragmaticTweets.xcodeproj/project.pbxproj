@@ -12,7 +12,19 @@
 		5CF8C9281D69581E00593E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9261D69581E00593E07 /* Main.storyboard */; };
 		5CF8C92A1D69581E00593E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9291D69581E00593E07 /* Assets.xcassets */; };
 		5CF8C92D1D69581E00593E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */; };
+		5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */; };
+		5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CF8C93D1D6A99BD00593E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CF8C9171D69581D00593E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CF8C91E1D69581D00593E07;
+			remoteInfo = PragmaticTweets;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +34,21 @@
 		5CF8C9291D69581E00593E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF8C92C1D69581E00593E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CF8C92E1D69581E00593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsTests.swift; sourceTree = "<group>"; };
+		5CF8C93C1D6A99BD00593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5CF8C91C1D69581D00593E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF8C9351D6A99BD00593E07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF8C9211D69581D00593E07 /* PragmaticTweets */,
+				5CF8C9391D6A99BD00593E07 /* PragmaticTweetsTests */,
 				5CF8C9201D69581D00593E07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */,
+				5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +87,16 @@
 				5CF8C92E1D69581E00593E07 /* Info.plist */,
 			);
 			path = PragmaticTweets;
+			sourceTree = "<group>";
+		};
+		5CF8C9391D6A99BD00593E07 /* PragmaticTweetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */,
+				5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */,
+				5CF8C93C1D6A99BD00593E07 /* Info.plist */,
+			);
+			path = PragmaticTweetsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +119,24 @@
 			productReference = 5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5CF8C9371D6A99BD00593E07 /* PragmaticTweetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF8C93F1D6A99BD00593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsTests" */;
+			buildPhases = (
+				5CF8C9341D6A99BD00593E07 /* Sources */,
+				5CF8C9351D6A99BD00593E07 /* Frameworks */,
+				5CF8C9361D6A99BD00593E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CF8C93E1D6A99BD00593E07 /* PBXTargetDependency */,
+			);
+			name = PragmaticTweetsTests;
+			productName = PragmaticTweetsTests;
+			productReference = 5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +150,10 @@
 					5CF8C91E1D69581D00593E07 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 24495W6MQC;
+					};
+					5CF8C9371D6A99BD00593E07 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5CF8C91E1D69581D00593E07;
 					};
 				};
 			};
@@ -114,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				5CF8C91E1D69581D00593E07 /* PragmaticTweets */,
+				5CF8C9371D6A99BD00593E07 /* PragmaticTweetsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +187,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CF8C9361D6A99BD00593E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +206,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CF8C9341D6A99BD00593E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */,
+				5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CF8C93E1D6A99BD00593E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CF8C91E1D69581D00593E07 /* PragmaticTweets */;
+			targetProxy = 5CF8C93D1D6A99BD00593E07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5CF8C9261D69581E00593E07 /* Main.storyboard */ = {
@@ -276,6 +358,30 @@
 			};
 			name = Release;
 		};
+		5CF8C9401D6A99BD00593E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PragmaticTweetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
+			};
+			name = Debug;
+		};
+		5CF8C9411D6A99BD00593E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PragmaticTweetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -293,6 +399,14 @@
 			buildConfigurations = (
 				5CF8C9321D69581E00593E07 /* Debug */,
 				5CF8C9331D69581E00593E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5CF8C93F1D6A99BD00593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF8C9401D6A99BD00593E07 /* Debug */,
+				5CF8C9411D6A99BD00593E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

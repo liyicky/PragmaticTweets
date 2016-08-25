@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        reloadTweets()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,10 +24,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func handleShowButtonTapped(sender: UIButton) {
-        if let url = NSURL (string: "https://twitter.com/liyicky") {
-            twitterWebView.loadRequest(NSURLRequest(URL: url))
-        }
-        
+        reloadTweets()
     }
 
     @IBAction func handleSendButtonTapped(sender: UIButton) {
@@ -37,6 +34,12 @@ class ViewController: UIViewController {
             self.presentViewController(tweetVC, animated: true, completion: nil)
         } else {
             NSLog("Can't Send Tweet")
+        }
+    }
+    
+    func reloadTweets() {
+        if let url = NSURL (string: "https://twitter.com/liyicky") {
+            twitterWebView.loadRequest(NSURLRequest(URL: url))
         }
     }
     

@@ -7,8 +7,11 @@
 //
 
 import XCTest
+@testable import PragmaticTweets
 
-class WebViewTests: XCTestCase {
+class WebViewTests: XCTestCase, UIWebViewDelegate {
+    
+    var loadedWebViewExpectation: XCTestExpectation?
     
     override func setUp() {
         super.setUp()
@@ -20,16 +23,28 @@ class WebViewTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        XCTFail("Web View load failed")
+        loadedWebViewExpectation?.fulfill()
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func webViewDidFinishLoad(webView: UIWebView) {
+        if let webViewContents = webView.stringByEvaluatingJavaScriptFromString("document.documentElement.textContent")
+            where webViewContents != "" {
+            loadedWebViewExpectation?.fulfill()
         }
+        
+    }
+    
+    func testWebviewLoaded() {
+        guard let viewController = UIApplication.sharedApplication().windows[0].rootViewController as? ViewController
+            else {
+                XCTFail("Couldn't get root view controller")
+                return
+            }
+        viewController.twitterWebView.delegate = self
+        loadedWebViewExpectation = expectationWithDescription("Web View auto-load test")
+        waitForExpectationsWithTimeout(5.0, handler: nil)
     }
     
 }
