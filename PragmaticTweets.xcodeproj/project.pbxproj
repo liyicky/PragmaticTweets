@@ -14,11 +14,18 @@
 		5CF8C92D1D69581E00593E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */; };
 		5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */; };
 		5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */; };
-		5CF8C9451D6E937300593E07 /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */; };
+		5CF8C94F1D77A14500593E07 /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C94E1D77A14500593E07 /* PragmaticTweetsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		5CF8C93D1D6A99BD00593E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CF8C9171D69581D00593E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CF8C91E1D69581D00593E07;
+			remoteInfo = PragmaticTweets;
+		};
+		5CF8C9511D77A14500593E07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5CF8C9171D69581D00593E07 /* Project object */;
 			proxyType = 1;
@@ -39,7 +46,9 @@
 		5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsTests.swift; sourceTree = "<group>"; };
 		5CF8C93C1D6A99BD00593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
-		5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
+		5CF8C94C1D77A14500593E07 /* PragmaticTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CF8C94E1D77A14500593E07 /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
+		5CF8C9501D77A14500593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5CF8C9491D77A14500593E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -65,6 +81,7 @@
 			children = (
 				5CF8C9211D69581D00593E07 /* PragmaticTweets */,
 				5CF8C9391D6A99BD00593E07 /* PragmaticTweetsTests */,
+				5CF8C94D1D77A14500593E07 /* PragmaticTweetsUITests */,
 				5CF8C9201D69581D00593E07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +91,7 @@
 			children = (
 				5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */,
 				5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */,
+				5CF8C94C1D77A14500593E07 /* PragmaticTweetsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +113,19 @@
 			isa = PBXGroup;
 			children = (
 				5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */,
-				5CF8C9441D6E937300593E07 /* PragmaticTweetsUITests.swift */,
 				5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */,
 				5CF8C93C1D6A99BD00593E07 /* Info.plist */,
 			);
 			path = PragmaticTweetsTests;
+			sourceTree = "<group>";
+		};
+		5CF8C94D1D77A14500593E07 /* PragmaticTweetsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5CF8C94E1D77A14500593E07 /* PragmaticTweetsUITests.swift */,
+				5CF8C9501D77A14500593E07 /* Info.plist */,
+			);
+			path = PragmaticTweetsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +166,24 @@
 			productReference = 5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5CF8C94B1D77A14500593E07 /* PragmaticTweetsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF8C9531D77A14500593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsUITests" */;
+			buildPhases = (
+				5CF8C9481D77A14500593E07 /* Sources */,
+				5CF8C9491D77A14500593E07 /* Frameworks */,
+				5CF8C94A1D77A14500593E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CF8C9521D77A14500593E07 /* PBXTargetDependency */,
+			);
+			name = PragmaticTweetsUITests;
+			productName = PragmaticTweetsUITests;
+			productReference = 5CF8C94C1D77A14500593E07 /* PragmaticTweetsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +199,10 @@
 						DevelopmentTeam = 24495W6MQC;
 					};
 					5CF8C9371D6A99BD00593E07 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5CF8C91E1D69581D00593E07;
+					};
+					5CF8C94B1D77A14500593E07 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 5CF8C91E1D69581D00593E07;
 					};
@@ -175,6 +223,7 @@
 			targets = (
 				5CF8C91E1D69581D00593E07 /* PragmaticTweets */,
 				5CF8C9371D6A99BD00593E07 /* PragmaticTweetsTests */,
+				5CF8C94B1D77A14500593E07 /* PragmaticTweetsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +240,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5CF8C9361D6A99BD00593E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF8C94A1D77A14500593E07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,8 +270,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */,
-				5CF8C9451D6E937300593E07 /* PragmaticTweetsUITests.swift in Sources */,
 				5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CF8C9481D77A14500593E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF8C94F1D77A14500593E07 /* PragmaticTweetsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +289,11 @@
 			isa = PBXTargetDependency;
 			target = 5CF8C91E1D69581D00593E07 /* PragmaticTweets */;
 			targetProxy = 5CF8C93D1D6A99BD00593E07 /* PBXContainerItemProxy */;
+		};
+		5CF8C9521D77A14500593E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CF8C91E1D69581D00593E07 /* PragmaticTweets */;
+			targetProxy = 5CF8C9511D77A14500593E07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -386,6 +454,28 @@
 			};
 			name = Release;
 		};
+		5CF8C9541D77A14500593E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PragmaticTweetsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PragmaticTweets;
+			};
+			name = Debug;
+		};
+		5CF8C9551D77A14500593E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PragmaticTweetsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PragmaticTweets;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +501,14 @@
 			buildConfigurations = (
 				5CF8C9401D6A99BD00593E07 /* Debug */,
 				5CF8C9411D6A99BD00593E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5CF8C9531D77A14500593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF8C9541D77A14500593E07 /* Debug */,
+				5CF8C9551D77A14500593E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

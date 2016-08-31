@@ -38,6 +38,16 @@
                ReferencedContainer = "container:PragmaticTweets.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5CF8C94B1D77A14500593E07"
+               BuildableName = "PragmaticTweetsUITests.xctest"
+               BlueprintName = "PragmaticTweetsUITests"
+               ReferencedContainer = "container:PragmaticTweets.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

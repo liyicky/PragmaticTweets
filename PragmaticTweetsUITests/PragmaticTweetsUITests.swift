@@ -1,8 +1,8 @@
 //
 //  PragmaticTweetsUITests.swift
-//  PragmaticTweets
+//  PragmaticTweetsUITests
 //
-//  Created by Jason Cheladyn on 8/25/16.
+//  Created by Jason Cheladyn on 9/1/16.
 //  Copyright © 2016 Liyicky. All rights reserved.
 //
 
@@ -27,4 +27,12 @@ class PragmaticTweetsUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testSendTweet() {
+        let app = XCUIApplication()
+        app.buttons["Send a Tweet"].tap()
+        NSThread.sleepForTimeInterval(2.0)
+        XCTAssertTrue(app.navigationBars["Twitter"].buttons["Cancel"].exists)
+    }
+    
 }
