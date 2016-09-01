@@ -13,7 +13,6 @@
 		5CF8C92A1D69581E00593E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9291D69581E00593E07 /* Assets.xcassets */; };
 		5CF8C92D1D69581E00593E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */; };
 		5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */; };
-		5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */; };
 		5CF8C94F1D77A14500593E07 /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C94E1D77A14500593E07 /* PragmaticTweetsUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +44,6 @@
 		5CF8C9381D6A99BD00593E07 /* PragmaticTweetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsTests.swift; sourceTree = "<group>"; };
 		5CF8C93C1D6A99BD00593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewTests.swift; sourceTree = "<group>"; };
 		5CF8C94C1D77A14500593E07 /* PragmaticTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF8C94E1D77A14500593E07 /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
 		5CF8C9501D77A14500593E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 		5CF8C9391D6A99BD00593E07 /* PragmaticTweetsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5CF8C9421D6C8ADC00593E07 /* WebViewTests.swift */,
 				5CF8C93A1D6A99BD00593E07 /* PragmaticTweetsTests.swift */,
 				5CF8C93C1D6A99BD00593E07 /* Info.plist */,
 			);
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF8C93B1D6A99BD00593E07 /* PragmaticTweetsTests.swift in Sources */,
-				5CF8C9431D6C8ADC00593E07 /* WebViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

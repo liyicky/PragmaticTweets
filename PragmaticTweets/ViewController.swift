@@ -9,13 +9,12 @@
 import UIKit
 import Social
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
     
     @IBOutlet weak var twitterWebView: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        reloadTweets()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,27 +22,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func handleShowButtonTapped(sender: UIButton) {
-        reloadTweets()
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 5
     }
-
-    @IBAction func handleSendButtonTapped(sender: UIButton) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-            let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetVC.setInitialText("アンバカ #pragios9")
-            self.presentViewController(tweetVC, animated: true, completion: nil)
-        } else {
-            NSLog("Can't Send Tweet")
-        }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section: \(section)"
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section + 1
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        cell.textLabel?.text = "Row: \(indexPath.row)"
+        return cell
     }
     
     func reloadTweets() {
-        if let url = NSURL (string: "https://twitter.com/liyicky") {
-            twitterWebView.loadRequest(NSURLRequest(URL: url))
-        }
+        
     }
-    
-    
-    
 }
 
