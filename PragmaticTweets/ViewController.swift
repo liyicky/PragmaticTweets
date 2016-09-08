@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Accounts
 
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
@@ -72,7 +73,54 @@ class ViewController: UITableViewController {
     }
     
     func reloadTweets() {
-        tableView.reloadData()
+        let accountStore = ACAccountStore()
+        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        let twitterParams = [ "count" : "100"]
+        let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
+        let request = SLRequest(forServiceType: SLServiceTypeTwitter,
+                                requestMethod: .GET,
+                                URL: twitterAPIURL,
+                                parameters: twitterParams)
+
+        
+        // Auth and get Accounts from iOS, get Response from Twitter **************************************************************
+        accountStore.requestAccessToAccountsWithType(twitterAccountType, options: nil, completion: { (granted: Bool, error: NSError!) -> Void in guard granted else {
+                NSLog("Account Access Denied")
+                return
+            }
+            NSLog("Account Access Granted")
+            
+            let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+            guard twitterAccounts.count > 0 else {
+                NSLog("No Twitter Accounts Configured")
+                return
+            }
+            
+            request.account = twitterAccounts.first as! ACAccount
+            request.performRequestWithHandler( { (data: NSData!, urlReponse: NSHTTPURLResponse!, error: NSError!) -> Void in
+                self.handleTwitterData(data, urlResponse: urlReponse, error: error)
+            })
+        })
+        
+        
+        
+    }
+    
+    private func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+        guard let data = data else {
+            NSLog("handleTwitterData() received no data!")
+            return
+        }
+        NSLog("handleTwitterData(), \(data.length) bytes")
+        
+        do {
+            let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions([]))
+            print("\(jsonObject)")
+
+        } catch let error as NSError {
+            NSLog("Json Error: \(error)")
+        }
+        
     }
 }
 
