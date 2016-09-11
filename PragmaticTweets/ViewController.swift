@@ -10,21 +10,11 @@ import UIKit
 import Social
 import Accounts
 
-let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-var parsedTweets: [ParsedTweet] = [
-    ParsedTweet(tweetText : "iOS 9 SDK Development now in print. " +
-        "Swift programming FTW!",
-        userName: "@pragprog",
-        createdAt: "2015-09-09 15:44:30 EDT", userAvatarURL: defaultAvatarURL),
-    ParsedTweet(tweetText : "But was that really such a good idea?", userName: "@redqueencoder",
-        createdAt: "2014-12-04 22:15:55 CST",
-        userAvatarURL: defaultAvatarURL),
-    ParsedTweet(tweetText : "Struct all the things!", userName: "@invalidname",
-        createdAt: "2015-07-31 05:39:39 EDT", userAvatarURL: defaultAvatarURL)
-]
 
 class ViewController: UITableViewController {
+    
+    var parsedTweets: [ParsedTweet] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,10 +54,6 @@ class ViewController: UITableViewController {
     }
     
     @IBAction func handleRefresh(sender: AnyObject?) {
-        parsedTweets.append(ParsedTweet(tweetText: "New Row",
-                            userName: "@refresh",
-                            createdAt: NSDate().description,
-                            userAvatarURL: defaultAvatarURL))
         reloadTweets()
         refreshControl?.endRefreshing()
     }
@@ -115,12 +101,32 @@ class ViewController: UITableViewController {
         
         do {
             let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions([]))
-            print("\(jsonObject)")
-
+            guard let jsonArray = jsonObject as? [[String : AnyObject]] else {
+                NSLog ("handleTwitterData() didn't get an array")
+                return
+            }
+            createParsedTweets(jsonArray)
+            tableView.reloadData()
+            
         } catch let error as NSError {
             NSLog("Json Error: \(error)")
         }
         
+    }
+    
+    private func createParsedTweets(tweetArray: NSArray) {
+        for tweetDict in tweetArray {
+            var parsedTweet = ParsedTweet()
+            parsedTweet.tweetText = tweetDict["text"] as? String
+            parsedTweet.createdAt = tweetDict["created_at"] as? String
+            if let userDict = tweetDict["user"] as? [String : AnyObject] {
+                parsedTweet.userName = userDict["name"] as? String
+                if let avatarURLString = userDict["profile_image_url_https"] as? String {
+                    parsedTweet.userAvatarURL = NSURL(string: avatarURLString)
+                }
+            }
+            parsedTweets.append(parsedTweet)
+        }
     }
 }
 
