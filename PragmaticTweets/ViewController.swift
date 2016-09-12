@@ -42,9 +42,17 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("CustomTweetCell") as! ParsedTweetCell
         let parsedTweet = parsedTweets[indexPath.row]
         
-        if let url = parsedTweet.userAvatarURL, imageData = NSData(contentsOfURL: url) {
-            cell.avatarImageView.image = UIImage(data: imageData)
-        }
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), {
+            if let url = parsedTweet.userAvatarURL,
+                imageData = NSData(contentsOfURL: url)
+                where cell.usernameLabel.text == parsedTweet.userName {
+                dispatch_async(dispatch_get_main_queue(), {
+                    cell.avatarImageView.image = UIImage(data: imageData)
+                })
+            }
+        })
+        
         
         cell.usernameLabel.text = parsedTweet.userName
         cell.tweetLabel.text = parsedTweet.tweetText
@@ -106,7 +114,9 @@ class ViewController: UITableViewController {
                 return
             }
             createParsedTweets(jsonArray)
-            tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
             
         } catch let error as NSError {
             NSLog("Json Error: \(error)")
