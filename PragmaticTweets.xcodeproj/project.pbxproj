@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9221D69581E00593E07 /* AppDelegate.swift */; };
-		5CF8C9251D69581E00593E07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9241D69581E00593E07 /* ViewController.swift */; };
+		5CF8C9251D69581E00593E07 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9241D69581E00593E07 /* RootViewController.swift */; };
 		5CF8C9281D69581E00593E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9261D69581E00593E07 /* Main.storyboard */; };
 		5CF8C92A1D69581E00593E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9291D69581E00593E07 /* Assets.xcassets */; };
 		5CF8C92D1D69581E00593E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF8C9221D69581E00593E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5CF8C9241D69581E00593E07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5CF8C9241D69581E00593E07 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5CF8C9271D69581E00593E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5CF8C9291D69581E00593E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CF8C92C1D69581E00593E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				5CF8C9561D77B11700593E07 /* ParsedTweet.swift */,
 				5CF8C9221D69581E00593E07 /* AppDelegate.swift */,
-				5CF8C9241D69581E00593E07 /* ViewController.swift */,
+				5CF8C9241D69581E00593E07 /* RootViewController.swift */,
 				5CF8C9261D69581E00593E07 /* Main.storyboard */,
 				5CF8C9291D69581E00593E07 /* Assets.xcassets */,
 				5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */,
@@ -265,7 +265,7 @@
 			files = (
 				5CF8C95B1D77CAAF00593E07 /* ParsedTweetCell.swift in Sources */,
 				5CF8C9571D77B11700593E07 /* ParsedTweet.swift in Sources */,
-				5CF8C9251D69581E00593E07 /* ViewController.swift in Sources */,
+				5CF8C9251D69581E00593E07 /* RootViewController.swift in Sources */,
 				5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +499,7 @@
 				5CF8C9331D69581E00593E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CF8C93F1D6A99BD00593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +508,7 @@
 				5CF8C9411D6A99BD00593E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CF8C9531D77A14500593E07 /* Build configuration list for PBXNativeTarget "PragmaticTweetsUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +517,7 @@
 				5CF8C9551D77A14500593E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

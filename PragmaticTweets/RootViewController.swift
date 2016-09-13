@@ -12,7 +12,7 @@ import Accounts
 
 
 
-class ViewController: UITableViewController {
+class RootViewController: UITableViewController {
     
     var parsedTweets: [ParsedTweet] = []
     
