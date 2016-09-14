@@ -67,36 +67,18 @@ class RootViewController: UITableViewController {
     }
     
     func reloadTweets() {
-        let accountStore = ACAccountStore()
-        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-        let twitterParams = [ "count" : "100"]
-        let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
-        let request = SLRequest(forServiceType: SLServiceTypeTwitter,
-                                requestMethod: .GET,
-                                URL: twitterAPIURL,
-                                parameters: twitterParams)
+                let twitterParams = [ "count" : "100"]
+        guard let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json") else {
+            return
+        }
+        
 
         
         // Auth and get Accounts from iOS, get Response from Twitter **************************************************************
-        accountStore.requestAccessToAccountsWithType(twitterAccountType, options: nil, completion: { (granted: Bool, error: NSError!) -> Void in guard granted else {
-                NSLog("Account Access Denied")
-                return
-            }
-            NSLog("Account Access Granted")
-            
-            let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-            guard twitterAccounts.count > 0 else {
-                NSLog("No Twitter Accounts Configured")
-                return
-            }
-            
-            request.account = twitterAccounts.first as! ACAccount
-            request.performRequestWithHandler( { (data: NSData!, urlReponse: NSHTTPURLResponse!, error: NSError!) -> Void in
-                self.handleTwitterData(data, urlResponse: urlReponse, error: error)
-            })
+        sentTwitterRequest(twitterAPIURL, params: twitterParams, completion: {
+            (data, urlResponse, error) -> Void in
+            self.handleTwitterData(data, urlResponse: urlResponse, error: error)
         })
-        
-        
         
     }
     
