@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CD3185A1D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD318591D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift */; };
+		5CD3185C1D88FC180026A199 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3185B1D88FC180026A199 /* TweetDetailViewController.swift */; };
 		5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9221D69581E00593E07 /* AppDelegate.swift */; };
 		5CF8C9251D69581E00593E07 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9241D69581E00593E07 /* RootViewController.swift */; };
 		5CF8C9281D69581E00593E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF8C9261D69581E00593E07 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5CD318591D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIRequestUtilities.swift; sourceTree = "<group>"; };
+		5CD3185B1D88FC180026A199 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF8C9221D69581E00593E07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CF8C9241D69581E00593E07 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CD3185D1D88FC260026A199 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CF8C95A1D77CAAF00593E07 /* ParsedTweetCell.swift */,
+				5CF8C9561D77B11700593E07 /* ParsedTweet.swift */,
+				5CF8C9241D69581E00593E07 /* RootViewController.swift */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		5CD3185E1D88FC570026A199 /* TweetDetailViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				5CD3185B1D88FC180026A199 /* TweetDetailViewController.swift */,
+			);
+			name = TweetDetailViewContoller;
+			sourceTree = "<group>";
+		};
 		5CF8C9161D69581D00593E07 = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +123,14 @@
 		5CF8C9211D69581D00593E07 /* PragmaticTweets */ = {
 			isa = PBXGroup;
 			children = (
-				5CF8C9561D77B11700593E07 /* ParsedTweet.swift */,
 				5CF8C9221D69581E00593E07 /* AppDelegate.swift */,
-				5CF8C9241D69581E00593E07 /* RootViewController.swift */,
+				5CD3185D1D88FC260026A199 /* RootViewController */,
+				5CD3185E1D88FC570026A199 /* TweetDetailViewContoller */,
 				5CF8C9261D69581E00593E07 /* Main.storyboard */,
 				5CD318591D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift */,
 				5CF8C9291D69581E00593E07 /* Assets.xcassets */,
 				5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */,
 				5CF8C92E1D69581E00593E07 /* Info.plist */,
-				5CF8C95A1D77CAAF00593E07 /* ParsedTweetCell.swift */,
 			);
 			path = PragmaticTweets;
 			sourceTree = "<group>";
@@ -271,6 +290,7 @@
 				5CF8C9571D77B11700593E07 /* ParsedTweet.swift in Sources */,
 				5CF8C9251D69581E00593E07 /* RootViewController.swift in Sources */,
 				5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */,
+				5CD3185C1D88FC180026A199 /* TweetDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

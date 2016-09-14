@@ -69,9 +69,9 @@
                                                 <constraint firstAttribute="width" constant="75" id="pMj-oh-R3g"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-Cf-5Bd">
-                                            <rect key="frame" x="101" y="25" width="491" height="21"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beP-V7-cT1">
+                                            <rect key="frame" x="101" y="54" width="491" height="39"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -81,9 +81,9 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beP-V7-cT1">
-                                            <rect key="frame" x="101" y="54" width="491" height="39"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-Cf-5Bd">
+                                            <rect key="frame" x="101" y="25" width="491" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -108,6 +108,7 @@
                                     <outlet property="createdAtLabel" destination="3FH-Hz-MJX" id="48n-tc-1xy"/>
                                     <outlet property="tweetLabel" destination="beP-V7-cT1" id="Hac-oe-3G8"/>
                                     <outlet property="usernameLabel" destination="J6R-Cf-5Bd" id="0Qn-ab-PY6"/>
+                                    <segue destination="HvD-hM-TD0" kind="show" identifier="showTweetDetailsSegue" id="h5S-BS-Nf6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -127,6 +128,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFc-pE-XmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="558" y="-415"/>
+        </scene>
+        <!--Tweet-->
+        <scene sceneID="tCB-CN-BCb">
+            <objects>
+                <viewController id="HvD-hM-TD0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vXW-V2-VLE"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Sh-tn-eRo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ChH-cA-FaS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tweet" id="Rh1-bP-YG9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="153-Fv-zaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-415"/>
         </scene>
     </scenes>
 </document>

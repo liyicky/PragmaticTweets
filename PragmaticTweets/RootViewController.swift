@@ -59,6 +59,16 @@ class RootViewController: UITableViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTweetDetailsSegue" {
+            if let row = tableView?.indexPathForSelectedRow?.row,
+            tweetDetailsVC = segue.destinationViewController as? TweetDetailViewController {
+                let parsedTweet = parsedTweets[row]
+                tweetDetailsVC.tweetID = parsedTweet.tweetId
+            }
+        }
+    }
+    
     @IBAction func handleRefresh(sender: AnyObject?) {
         reloadTweets()
         refreshControl?.endRefreshing()
@@ -119,6 +129,7 @@ class RootViewController: UITableViewController {
             var parsedTweet = ParsedTweet()
             parsedTweet.tweetText = tweetDict["text"] as? String
             parsedTweet.createdAt = tweetDict["created_at"] as? String
+            parsedTweet.tweetId = tweetDict["id_str"] as? String
             if let userDict = tweetDict["user"] as? [String : AnyObject] {
                 parsedTweet.userName = userDict["name"] as? String
                 if let avatarURLString = userDict["profile_image_url_https"] as? String {
