@@ -10,11 +10,9 @@ import UIKit
 import Social
 import Accounts
 
-
+var parsedTweets: [ParsedTweet] = []
 
 class RootViewController: UITableViewController {
-    
-    var parsedTweets: [ParsedTweet] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,13 +64,22 @@ class RootViewController: UITableViewController {
         refreshControl?.endRefreshing()
     }
     
+    @IBAction func handleTweetButtonTapped(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetVC.setInitialText("Type Tweet Here")
+            self.presentViewController(tweetVC, animated: true, completion: nil)
+        } else {
+            NSLog("Can't send Tweet")
+        }
+        
+    }
+    
     func reloadTweets() {
                 let twitterParams = [ "count" : "100"]
         guard let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json") else {
             return
         }
-        
-
         
         // Auth and get Accounts from iOS, get Response from Twitter **************************************************************
         sentTwitterRequest(twitterAPIURL, params: twitterParams, completion: {
@@ -107,6 +114,7 @@ class RootViewController: UITableViewController {
     }
     
     private func createParsedTweets(tweetArray: NSArray) {
+        parsedTweets = []
         for tweetDict in tweetArray {
             var parsedTweet = ParsedTweet()
             parsedTweet.tweetText = tweetDict["text"] as? String
