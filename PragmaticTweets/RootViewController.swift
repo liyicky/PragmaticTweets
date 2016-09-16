@@ -92,7 +92,7 @@ class RootViewController: UITableViewController {
         }
         
         // Auth and get Accounts from iOS, get Response from Twitter **************************************************************
-        sentTwitterRequest(twitterAPIURL, params: twitterParams, completion: {
+        sendTwitterRequest(twitterAPIURL, params: twitterParams, completion: {
             (data, urlResponse, error) -> Void in
             self.handleTwitterData(data, urlResponse: urlResponse, error: error)
         })
