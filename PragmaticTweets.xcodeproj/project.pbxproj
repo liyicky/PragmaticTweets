@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0F31031D90D6C6008AFC9E /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0F31021D90D6C6008AFC9E /* UserDetailViewController.swift */; };
 		5CD3185A1D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD318591D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift */; };
 		5CD3185C1D88FC180026A199 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3185B1D88FC180026A199 /* TweetDetailViewController.swift */; };
 		5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8C9221D69581E00593E07 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0F31021D90D6C6008AFC9E /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		5CD318591D88D8DE0026A199 /* TwitterAPIRequestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIRequestUtilities.swift; sourceTree = "<group>"; };
 		5CD3185B1D88FC180026A199 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		5CF8C91F1D69581D00593E07 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				5CF8C9291D69581E00593E07 /* Assets.xcassets */,
 				5CF8C92B1D69581E00593E07 /* LaunchScreen.storyboard */,
 				5CF8C92E1D69581E00593E07 /* Info.plist */,
+				5C0F31021D90D6C6008AFC9E /* UserDetailViewController.swift */,
 			);
 			path = PragmaticTweets;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				5CF8C95B1D77CAAF00593E07 /* ParsedTweetCell.swift in Sources */,
 				5CF8C9571D77B11700593E07 /* ParsedTweet.swift in Sources */,
 				5CF8C9251D69581E00593E07 /* RootViewController.swift in Sources */,
+				5C0F31031D90D6C6008AFC9E /* UserDetailViewController.swift in Sources */,
 				5CF8C9231D69581E00593E07 /* AppDelegate.swift in Sources */,
 				5CD3185C1D88FC180026A199 /* TweetDetailViewController.swift in Sources */,
 			);
