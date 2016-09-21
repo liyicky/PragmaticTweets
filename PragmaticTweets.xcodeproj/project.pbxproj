@@ -225,13 +225,16 @@
 					5CF8C91E1D69581D00593E07 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 24495W6MQC;
+						LastSwiftMigration = 0800;
 					};
 					5CF8C9371D6A99BD00593E07 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5CF8C91E1D69581D00593E07;
 					};
 					5CF8C94B1D77A14500593E07 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5CF8C91E1D69581D00593E07;
 					};
 				};
@@ -445,6 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -459,6 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -470,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
 			};
 			name = Debug;
@@ -482,6 +488,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
 			};
 			name = Release;
@@ -493,6 +500,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PragmaticTweets;
 			};
 			name = Debug;
@@ -504,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liyicky.PragmaticTweetsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PragmaticTweets;
 			};
 			name = Release;

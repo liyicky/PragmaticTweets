@@ -19,7 +19,7 @@ class RootViewController: UITableViewController {
         reloadTweets()
         
         let refresher = UIRefreshControl()
-        refresher.addTarget(self, action: "handleRefresh:", forControlEvents: .ValueChanged)
+        refresher.addTarget(self, action: #selector(RootViewController.handleRefresh(_:)), forControlEvents: .ValueChanged)
         refreshControl = refresher
     }
 
