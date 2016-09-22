@@ -25,7 +25,6 @@ class RootViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -86,7 +85,7 @@ class RootViewController: UITableViewController {
     }
     
     func reloadTweets() {
-                let twitterParams = [ "count" : "100"]
+        let twitterParams = [ "count" : "100"]
         guard let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json") else {
             return
         }

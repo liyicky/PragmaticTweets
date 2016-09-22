@@ -148,7 +148,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="F6M-ns-2xC" kind="presentation" id="k6O-50-qG9"/>
+                                    <segue destination="F6M-ns-2xC" kind="presentation" identifier="showUserDetailSegue" id="k6O-50-qG9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Real Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLO-KY-mg9">
@@ -252,6 +252,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GV-p6-hd6">
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <segue destination="3Jm-dD-bQH" kind="unwind" unwindAction="unwindToTweetDetailVCWithUnwindSegue:" id="NPb-IQ-Sg4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -265,7 +268,6 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="pzO-PU-ReT" id="7Q0-9Y-mpz"/>
-                        <outlet property="doneButton" destination="8GV-p6-hd6" id="sOA-LM-MOX"/>
                         <outlet property="locationLabel" destination="AqW-uQ-30A" id="fgK-sR-5kc"/>
                         <outlet property="screenNameLabel" destination="dg5-DM-InV" id="FqK-a4-C27"/>
                         <outlet property="userImageView" destination="pKx-Ir-1zc" id="iUo-hr-2Zv"/>
@@ -273,6 +275,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abq-tt-3UC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3Jm-dD-bQH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1957" y="-415"/>
         </scene>

@@ -22,10 +22,19 @@ class TweetDetailViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         reloadTweetDetails()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let userDetailVC = segue.destinationViewController as? UserDetailViewController
+            where segue.identifier == "showUserDetailSegue" {
+            userDetailVC.screenName = userUsernameLabel.text
+        }
+    }
+    
+    @IBAction func unwindToTweetDetailVC(withUnwindSegue unwindSegue: UIStoryboardSegue) {
+        NSLog("Unwind to TweetDetail")
     }
     
     func reloadTweetDetails() {

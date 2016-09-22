@@ -16,7 +16,6 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var screenNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var doneButton: UIButton!
     
     var screenName: String?
     
@@ -37,12 +36,32 @@ class UserDetailViewController: UIViewController {
                 })
             })
         }
-        
     }
     
     func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+        guard let data = data else {
+            NSLog("handleTwitterData() received no data")
+            return
+        }
         
-        
+        do {
+            let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions([]))
+            guard let tweetDict = jsonObject as? [String : AnyObject] else {
+                NSLog("handleTwitterData() doesn't contain a dictionary")
+                return
+            }
+            usernameLabel.text = tweetDict["name"] as! String
+            screenNameLabel.text = tweetDict["screen_name"] as! String
+            locationLabel.text = tweetDict["location"] as! String
+            descriptionLabel.text = tweetDict["description"] as! String
+            
+            if let userImageURL = NSURL(string: (tweetDict["profile_image_url_https"] as! String)),
+            userImageData = NSData(contentsOfURL: userImageURL) {
+                userImageView.image = UIImage(data: userImageData)
+            }
+        } catch let error as NSError {
+            NSLog("JSON Error: \(error)")
+        }
         
     }
     
